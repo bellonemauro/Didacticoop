@@ -30,6 +30,8 @@ if(COMMAND cmake_policy) #return true if the COMMAND cmake_policy exist - this a
 	#The target in the TARGET signature of add_custom_command() must exist - see https://cmake.org/cmake/help/v3.0/policy/CMP0040.html
 	cmake_policy(SET CMP0040 NEW)
 	
+	cmake_policy(SET CMP0071 NEW)
+	
 	# Allow using the LOCATION target property.
 	if( "${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}" LESS 3.0)
 		cmake_policy(SET CMP0026 NEW)
