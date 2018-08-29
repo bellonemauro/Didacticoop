@@ -42,7 +42,10 @@ CMake --> configure --> generate
 
 # Authors
 Below the list of authors: 
-
+Lorenzo De Pascalis
+Michele De Pascalis
+Mauro Bellone
+Nicholas Dima
 
 
 
