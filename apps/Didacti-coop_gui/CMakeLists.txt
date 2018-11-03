@@ -7,7 +7,7 @@
 #  | Released under GNU GPL License.                                           |
 #  +---------------------------------------------------------------------------+ 
 
-project(Didacti-coop_gui)
+project(Galileo)
 
 # --------------------------------------
 #  set variables for compilation 
