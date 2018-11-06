@@ -31,7 +31,7 @@ didacticoop_hooke::didacticoop_hooke(QMainWindow *parent) :
 	m_series_force_measure->setMarkerSize(5.0);
 	//m_series_force_measure->setMarkerShape(QtCharts::QScatterSeries::MarkerShape::MarkerShapeCircle);
 	
-	m_series_X->setRange(0, 200);
+	m_series_X->setRange(0, 160);
 	m_series_X->setTickCount(5);
 	m_series_X->setLabelFormat("%.0f");
 

@@ -1008,12 +1008,19 @@ void didacticoop::about() {
 
 	QMessageBox messageBox;
 	QString msg_title = "Credits";
-	QString msg_content = tr("<b>Galileo</b> is a <a href='http://www.didacticoop.com/'>DidactiCoop</a>  software<br>"
-		"Copyright DidactiCoop, 2017 <br> <br>"
-		"Version: 1.0");
+	QString msg_content = tr("<font size=\"+2\"><b>Galileo</b> is a <a href='http://www.didacticoop.com/'>DidactiCoop</a> open source software<br>"
+		"Version: 1.0 <br>"
+		"Copyright DidactiCoop, 2018 <br> <br>"
+		"CEO, Lorenzo De Pascalis 2018 <br>"
+		"Hardware development, Michele De Pascalis <br>"
+		"Software development, Mauro Bellone <br>"
+		"Graphic design, Nicholas Dima <br>"
+		"<br></font>"
+		"<img src = \":/icons/PIN_loghi.png\" alt=\"grafico\" >"
+		);
 	messageBox.about(this, msg_title, msg_content);
 	messageBox.setIconPixmap(QPixmap("./icons/Logo.png"));
-	messageBox.setFixedSize(500, 700);
+	messageBox.setFixedSize(600, 800);
 }
 
 void didacticoop::onCheckBoxes_hooke_x( bool _state)
@@ -1267,7 +1274,10 @@ void didacticoop::exportToPdf()
 	//QString str = codec->toUnicode(content);
 
 	QPixmap p = m_chartView->grab();
-	p.save("./icons/grafico.png", "PNG",1000);
+	QString path = QDir::tempPath();
+	string ss = path.toStdString();
+	path.append("/grafico.png");
+	p.save(path, "PNG",1000);
 		
 	doc.setHtml(generateHTMLfile());//(generateHTMLfile());//(str);//
 	doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
@@ -1458,7 +1468,11 @@ QString didacticoop::generateHTMLfile()
 			"</table>"
 			// add chart image here 
 			"<p align=\"center\">"
-			"<img src = \"./icons/grafico.png\" alt=\"grafico\" height=\"200\" width=\"200\" >"
+			"<img src = \"");
+		QString path = QDir::tempPath();
+		path.append("/grafico.png");
+		html_content.append(path);
+		html_content.append("\" alt=\"grafico\" height=\"200\" width=\"200\" >"
 			"&nbsp;</p>"
 
 			"<div align=\"center\">"

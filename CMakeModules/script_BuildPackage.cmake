@@ -23,11 +23,11 @@ set (WEB_DEV "http://www.maurobellone.com")
 set(CPACK_NSIS_URL_INFO_ABOUT "${WEBSITE}")
 set(CPACK_NSIS_HELP_LINK "${WEBSITE}")
 
-set(CPACK_PACKAGE_NAME @PROJECT_NAME@)
-set(CPACK_PACKAGE_VENDOR @PROJECT_NAME@)
+set(CPACK_PACKAGE_NAME "Galileo")#@PROJECT_NAME@)
+set(CPACK_PACKAGE_VENDOR "Galileo")#@PROJECT_NAME@)
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Galileo")
 set(CPACK_NSIS_CONTACT "Mauro Bellone bellonemauro@gmail.com" )
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "@PROJECT_NAME@")# @_VERSION@")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "Galileo")#"@PROJECT_NAME@")# @_VERSION@")
 
 # this allows to check older installations and properly remove them
 set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL "ON") 
@@ -54,13 +54,13 @@ set(CPACK_NSIS_MENU_LINKS
             "${WEB_DOCS}" "Documentation"
             "${WEB_DEV}" "Developer Website" )
 
-set(CPACK_NSIS_DISPLAY_NAME "Galileo_V.${CMAKE_SOFTWARE_FULL_VERSION}")
+set(CPACK_NSIS_DISPLAY_NAME "Galileo")#_V.${CMAKE_SOFTWARE_FULL_VERSION}")
 			
 #SET(CPACK_PACKAGE_EXECUTABLES "Target_Name" "Target Name")
-SET(CPACK_PACKAGE_EXECUTABLES "Galileo" "Galileo_V.${CMAKE_SOFTWARE_FULL_VERSION}")
+SET(CPACK_PACKAGE_EXECUTABLES "Galileo" "Galileo")#_V.${CMAKE_SOFTWARE_FULL_VERSION}")
 
 # required by cmake to install new registry key for the executable
-set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "${CMAKE_PROJECT_NAME}-${CMAKE_SOFTWARE_FULL_VERSION}")
+set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "Galileo")#"${CMAKE_PROJECT_NAME}-${CMAKE_SOFTWARE_FULL_VERSION}")
 
 # this is to create the user folders during the installation
 set( CPACK_NSIS_EXTRA_INSTALL_COMMANDS "
